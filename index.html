@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DealData</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заявки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .form-section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(50% - 10px);
+        }
+
+        h2 {
+            text-align: left; /* Выравнивание заголовка по левому краю */
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: none; /* Скрываем label, так как мы используем placeholder */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"],
+        select,
+        textarea,
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px; /* Увеличиваем шрифт для лучшего восприятия */
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #999; /* Цвет текста подсказки */
+        }
+
+        .inline {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .inline > div {
+            width: 48%;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Client details -->
+    <div class="form-section">
+        <h2>Client Details</h2>
+        <div class="form-group inline">
+            <div>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            </div>
+            <div>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" id="phone" name="phone" placeholder="Phone" required>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email (optional)">
+        </div>
+    </div>
+
+    <!-- Job details -->
+    <div class="form-section">
+        <h2>Job Details</h2>
+        <div class="form-group inline">
+            <div>
+                <select id="jobType" name="jobType" required>
+                    <option value="" disabled selected hidden>Job Type</option>
+                    <option value="type1">Type 1</option>
+                    <option value="type2">Type 2</option>
+                    <option value="type3">Type 3</option>
+                </select>
+            </div>
+            <div>
+                <select id="jobSource" name="jobSource" required>
+                    <option value="" disabled selected hidden>Job Source</option>
+                    <option value="source1">Source 1</option>
+                    <option value="source2">Source 2</option>
+                    <option value="source3">Source 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea id="jobDescription" name="jobDescription" placeholder="Job Description (optional)" rows="4"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Service location -->
+    <div class="form-section">
+        <h2>Service Location</h2>
+        <div class="form-group">
+            <input type="text" id="address" name="address" placeholder="Address" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="city" name="city" placeholder="City" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="state" name="state" placeholder="State" required>
+        </div>
+        <div class="form-group inline">
+            <div>
+                <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code" required>
+            </div>
+            <div>
+                <select id="area" name="area" required>
+                    <option value="" disabled selected hidden>Area</option>
+                    <option value="area1">Area 1</option>
+                    <option value="area2">Area 2</option>
+                    <option value="area3">Area 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scheduled -->
+    <div class="form-section">
+        <h2>Scheduled</h2>
+        <div class="form-group">
+            <input type="date" id="startDate" name="startDate" required>
+        </div>
+        <div class="form-group inline">
+            <div>
+                <input type="time" id="startTime" name="startTime" required>
+            </div>
+            <div>
+                <input type="time" id="endTime" name="endTime" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <select id="testSelect" name="testSelect" required>
+                <option value="" disabled selected hidden>Test Select</option>
+                <option value="test1">Test 1</option>
+                <option value="test2">Test 2</option>
+                <option value="test3">Test 3</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
